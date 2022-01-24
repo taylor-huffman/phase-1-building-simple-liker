@@ -9,7 +9,7 @@ let handleServerResponse = (e) => {
   mimicServerCall()
   .then(response => {
     console.log(response)
-    if(response === 'Pretend remote server notified of action!' && e.target.textContent === EMPTY_HEART) {
+    if(e.target.textContent === EMPTY_HEART) {
       e.target.textContent = FULL_HEART
       e.target.classList.add('activated-heart')
     } else {
